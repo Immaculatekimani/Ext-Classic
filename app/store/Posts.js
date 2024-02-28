@@ -1,0 +1,8 @@
+Ext.define('MyClassic.store.Posts',{
+    extend: 'Ext.data.Store',
+    alias: 'store.posts',
+    model: 'MyClassic.model.Post',
+    requires: ['MyClassic.model.Post'],
+    autoLoad:true
+
+})
