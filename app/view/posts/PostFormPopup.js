@@ -7,6 +7,7 @@ Ext.define('MyClassic.view.posts.PostFormPopup', {
     autoShow: true,
     closable: true,
     modal: true,
+    controller: 'postformpopupcontroller', // Add the controller
     items:[{
        xtype: 'form',
        items:[
@@ -42,7 +43,13 @@ Ext.define('MyClassic.view.posts.PostFormPopup', {
 
     }],
     buttons: [
-        { text: 'Save' },
-        { text: 'Cancel' },
+        { 
+        text: 'Save',
+        handler: 'onSaveClicked'
+     },
+        {
+        text: 'Cancel',
+        handler: 'onCancelClicked' 
+    },
     ]
 })
