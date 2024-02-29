@@ -3,6 +3,12 @@ Ext.define('MyClassic.store.Posts',{
     alias: 'store.posts',
     model: 'MyClassic.model.Post',
     requires: ['MyClassic.model.Post'],
-    autoLoad:true
+    autoLoad:true,
+    sorters: ['id'],
+    filters: {
+        property: 'userId',
+        value   : '10'
+    }
+
 
 })

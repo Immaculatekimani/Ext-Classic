@@ -9,6 +9,3 @@ Ext.define(
 
     
     })
-Ext.onReady(function() {
-    Ext.create("MyClassic.view.demo.CustomWindow");
-});
