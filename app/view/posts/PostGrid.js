@@ -5,10 +5,16 @@ Ext.define('MyClassic.view.posts.PostGrid', {
     store: {
         type: 'posts'
     },
-    tbar:[{
+    tbar: [{
         text: 'Add Post',
-        listeners:{
+        listeners: {
             click: 'onAddPostClicked'
+        }
+    },
+    {
+        text: 'Form Fields',
+        listeners: {
+            click: 'onFormFieldClicked'
         }
     }],
     columns: [

@@ -8,48 +8,59 @@ Ext.define('MyClassic.view.posts.PostFormPopup', {
     closable: true,
     modal: true,
     controller: 'postformpopupcontroller', // Add the controller
-    items:[{
-       xtype: 'form',
-       items:[
-           {
-               allowBlank: false,
-               xtype:'textfield',
-               fieldLabel: 'Post ID',
-               name: 'id',
-               emptyText: 'Post id'
-           },
-           {
-               allowBlank: false,
-               xtype: 'textfield',
-               fieldLabel: 'User ID',
-               name: 'userId',
-               emptyText: 'user id'
-           },
-           {
-               allowBlank: false,
-               xtype: 'textfield',
-               fieldLabel: 'Title',
-               name: 'title',
-               emptyText: 'title'
-           },
-           {
-               allowBlank: false,
-               xtype: 'datefield',
-               fieldLabel: 'Published Date',
-               name: 'date',
-               emptyText: 'date'
-           },
-       ],
+    items: [{
+        xtype: 'form',
+        reference: 'postform',
+        itemId: 'postform',
+        jsonSubmit: true,
+        bodyPadding: 10,
+        modelValidation: true,
+        items: [
+            {
+                allowBlank: true,
+                readOnly: false,
+                xtype: 'textfield',
+                reference: 'postId',
+                fieldLabel: 'Post ID',
+                name: 'id',
+                emptyText: 'Post id'
+            },
+            {
+                allowBlank: false,
+                xtype: 'textfield',
+                fieldLabel: 'User ID',
+                name: 'userId',
+                emptyText: 'user id'
+            },
+            {
+                allowBlank: false,
+                xtype: 'textfield',
+                fieldLabel: 'Title',
+                name: 'title',
+                emptyText: 'title'
+            },
+            {
+                allowBlank: false,
+                xtype: 'textareafield',
+                fieldLabel: 'Body',
+                name: 'body',
+                emptyText: 'body'
+            },
+        ],
 
     }],
     buttons: [
-        { 
-        text: 'Save',
-        handler: 'onSaveClicked'
-     },
         {
-        text: 'Cancel',
-        handler: 'onCancelClicked' 
-    },
+            text: 'Save',
+            handler: 'onSaveClicked'
+        },
+        {
+            text: 'Clear',
+            handler: 'onClearClicked'
+        },
+        {
+            text: 'Cancel',
+            handler: 'onCancelClicked'
+        },
     ]
 })

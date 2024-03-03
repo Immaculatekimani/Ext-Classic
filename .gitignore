@@ -20,6 +20,8 @@ sencha-error-*
 *.iml
 *.iws
 .jpb
+.vscode/
+license_instructions.txt
 
 # Mac
 .DS_Store
