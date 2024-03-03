@@ -15,7 +15,9 @@ Ext.define('MyClassic.view.main.Main', {
 
         'MyClassic.view.main.MainController',
         'MyClassic.view.main.MainModel',
-        'MyClassic.view.main.List'
+        'MyClassic.view.main.List',
+        'MyClassic.view.layersandcontainers.ViewPort'
+        
     ],
 
     controller: 'main',
@@ -23,6 +25,11 @@ Ext.define('MyClassic.view.main.Main', {
 
     ui: 'navigation',
 
+    launch: function () {
+        Ext.create('MyClassic.view.layersandcontainers.ViewPort', {
+            renderTo: Ext.getBody()
+        });
+    },
     tabBarHeaderPosition: 1,
     titleRotation: 0,
     tabRotation: 0,
