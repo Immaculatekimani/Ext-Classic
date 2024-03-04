@@ -5,6 +5,7 @@ Ext.define('MyClassic.store.Posts',{
     requires: ['MyClassic.model.Post'],
     autoLoad:true,
     sorters: ['id'],
+    pageSize: 25
     // filters: {
     //     property: 'userId',
     //     value   : '10'
