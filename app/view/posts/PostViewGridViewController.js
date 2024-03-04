@@ -14,5 +14,17 @@ Ext.define('MyClassic.view.posts.PostGridViewController',{
         Ext.create({
             xtype: "formfielddemo",
         });
+    },
+    onAccordionClicked:function(btn,e,eOpts){
+        console.log(btn.getText() + " was clicked");
+        Ext.create({
+            xtype: "accordion",
+        });
+    },
+    onHboxClicked:function(btn,e,eOpts){
+        console.log(btn.getText() + " was clicked");
+        Ext.create({
+            xtype: "hbox",
+        });
     }
 })

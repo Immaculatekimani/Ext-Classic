@@ -16,7 +16,20 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         listeners: {
             click: 'onFormFieldClicked'
         }
-    }],
+    },
+    {
+        text: 'Accordion',
+        listeners: {
+            click: 'onAccordionClicked'
+        }
+    },
+    {
+        text: 'HBox',
+        listeners: {
+            click: 'onHboxClicked'
+        }
+    }
+],
     columns: [
         { dataIndex: 'id', text: 'ID' },
         { dataIndex: 'title', text: 'Title', flex: 1 },

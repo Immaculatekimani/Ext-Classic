@@ -15,6 +15,7 @@ Ext.define('MyClassic.view.posts.PostFormPopup', {
         jsonSubmit: true,
         bodyPadding: 10,
         modelValidation: true,
+        layout: 'form',
         items: [
             {
                 allowBlank: true,
