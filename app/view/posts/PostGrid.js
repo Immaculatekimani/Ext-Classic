@@ -28,6 +28,12 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         listeners: {
             click: 'onHboxClicked'
         }
+    },
+    {
+        text: 'Check Out',
+        listeners: {
+            click: 'onCheckoutClicked'
+        }
     }
 ],
     columns: [

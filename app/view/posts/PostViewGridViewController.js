@@ -26,5 +26,11 @@ Ext.define('MyClassic.view.posts.PostGridViewController',{
         Ext.create({
             xtype: "hbox",
         });
+    },
+    onCheckoutClicked:function(btn,e,eOpts){
+        console.log(btn.getText() + " was clicked");
+        Ext.create({
+            xtype: "checkoutform",
+        });
     }
 })
