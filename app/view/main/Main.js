@@ -76,13 +76,23 @@ Ext.define('MyClassic.view.main.Main', {
         }
     },
 
-    items: [{
+    items: [
+        {
+            title: 'Data Panel',
+            iconCls: 'fa-database',
+            items: [
+                {
+                    xtype: 'parentpanel'
+                }
+            ]
+        },
+        {
             title: 'Posts',
             iconCls: 'fa-user',
             items: [
-                {
-                    xtype: 'postgrid'
-                }
+                // {
+                //     xtype: 'postgrid'
+                // }
             ]
         }, {
         title: 'Home',
@@ -93,11 +103,6 @@ Ext.define('MyClassic.view.main.Main', {
         }]
     }, 
     {
-        title: 'Groups',
-        items: [
-            
-        ]
-    }, {
         title: 'Settings',
         iconCls: 'fa-cog',
         items: [

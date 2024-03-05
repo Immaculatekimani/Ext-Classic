@@ -9,8 +9,6 @@ Ext.define('MyClassic.view.main.List', {
         'MyClassic.store.Personnel'
     ],
 
-    title: 'Personnel',
-
     store: {
         type: 'personnel'
     },

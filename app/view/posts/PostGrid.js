@@ -40,7 +40,7 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         { dataIndex: '_id', text: 'ID' },
         { dataIndex: 'title', text: 'Title', flex: 1 },
         { dataIndex: 'body', text: 'Body', flex: 2 },
-        { dataIndex: 'userId', text: 'User ID' }
+        { dataIndex: 'userId', text: 'User ID', hidden: false }
     ],
     selModel: {
         selType: 'checkboxmodel',
@@ -51,6 +51,5 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         displayInfo: true
     },
     scrollable:true,
-    height: 800
 
 })
