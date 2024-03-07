@@ -4,6 +4,7 @@ Ext.define('MyClassic.model.Todo',{
     fields:[
         '_id',
         'title',
-        'completed'
+        'completed',
+        'userId',
     ]
 })
