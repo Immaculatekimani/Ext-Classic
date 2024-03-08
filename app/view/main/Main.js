@@ -87,14 +87,15 @@ Ext.define('MyClassic.view.main.Main', {
             ]
         },
         {
-            title: 'Employees',
-            iconCls: 'fa-user',
+            title: 'Data Groups',
+            iconCls: 'fa-layer-group',
             items: [
                 {
-                    xtype: 'employeegrid'
+                    xtype: 'summarizepanel'
                 }
             ]
-        }, {
+        }, 
+      {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
