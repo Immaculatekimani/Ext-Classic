@@ -87,12 +87,12 @@ Ext.define('MyClassic.view.main.Main', {
             ]
         },
         {
-            title: 'Posts',
+            title: 'Employees',
             iconCls: 'fa-user',
             items: [
-                // {
-                //     xtype: 'postgrid'
-                // }
+                {
+                    xtype: 'employeegrid'
+                }
             ]
         }, {
         title: 'Home',
