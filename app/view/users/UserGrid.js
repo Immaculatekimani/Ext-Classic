@@ -32,10 +32,17 @@ Ext.define('MyClassic.view.users.UserGrid',{
         {
             text: 'Add User'
         },
+        {
+            text: 'Model Binding',
+            handler: 'onModelBinding'
+        },
         '->',
         {
-          text:'Show Details',
-          handler:'onShowDetails'  
+            text: 'Show Details',
+            handler: 'onShowDetails',
+            bind: {
+                disabled: '{!usergrid.selection}'
+            }  
         }
     ],
     selModel: {
