@@ -1,0 +1,9 @@
+$myclassic-footer-text-color: rgb(11, 103, 196); //#1
+.app-footer-title {
+color: $myclassic-footer-text-color; //#2
+font-size: 12px;
+font-weight: bold;
+}
+.app-footer {
+border-top: 1px solid darken($myclassic-footer-text-color, 15); //#3
+}

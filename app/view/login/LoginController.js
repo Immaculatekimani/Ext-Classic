@@ -1,6 +1,6 @@
 Ext.define('MyClassic.view.login.LoginController', {
     extend:'Ext.app.ViewController',
-    alias:'controller.login',
+    alias:'controller.logincontroller',
     onLoginClick: function () {
         // http://localhost:8080/api/authenticate
         // Content - Type: application / json
