@@ -14,5 +14,5 @@ Ext.application({
     ],
 
     // The name of the initial view to create.
-    mainView: 'MyClassic.view.main.Main'
+     mainView: 'MyClassic.view.main.Main'
 });

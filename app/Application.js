@@ -23,5 +23,13 @@ Ext.define('MyClassic.Application', {
                 }
             }
         );
-    }
+     },
+    launch:function(profile){
+        var loggedIn;
+        loggedIn = localStorage.getItem("MyAppLoggedIn");
+        console.log(loggedIn);
+        Ext.create({
+          xtype: loggedIn ? 'app-main' : 'login'
+        })
+      }
 });

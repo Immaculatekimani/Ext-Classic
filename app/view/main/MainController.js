@@ -15,5 +15,17 @@ Ext.define('MyClassic.view.main.MainController', {
         if (choice === 'yes') {
             //
         }
+    },
+    onLogout: function() {
+
+        // Remove the localStorage key/value
+        localStorage.removeItem('MyAppLoggedIn');
+
+        // Remove Main View
+        this.getView().destroy();
+
+        // Add the Login Window
+        Ext.widget('login');
+
     }
 });
