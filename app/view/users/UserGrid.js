@@ -6,7 +6,7 @@ Ext.define('MyClassic.view.users.UserGrid',{
     store:{
         type:'users'
     },
-    height:1200,
+    height:400,
     plugins: {
         cellediting: {
             clicksToEdit: 1

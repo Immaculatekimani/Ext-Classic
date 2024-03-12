@@ -15,8 +15,9 @@ Ext.define('MyClassic.store.Menu',{
                         leaf:true
                     },
                     {
-                        text: 'Permission',
-                        iconCls: 'fas fa-user-secret',
+                        text: 'Data Groups',
+                        iconCls: 'fa-layer-group',
+                        className: 'summarizepanel',
                         leaf: true
                     }
                 ]
@@ -27,13 +28,15 @@ Ext.define('MyClassic.store.Menu',{
                 iconCls:'fa fa-database fa-lg',
                 children: [
                     {
-                        text: 'Users',
-                        iconCls: 'fa fa-users',
+                        text: 'User Details',
+                        iconCls: 'fa-database',
+                        className: 'parentpanel',
                         leaf: true
                     },
                     {
-                        text: 'Permission',
+                        text: 'Personnel',
                         iconCls: 'fa fa-users',
+                        className: 'mainlist',
                         leaf: true
                     }
                 ]

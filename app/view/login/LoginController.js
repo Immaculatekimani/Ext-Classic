@@ -16,10 +16,7 @@ Ext.define('MyClassic.view.login.LoginController', {
         this.getView().destroy(); 
 
         // Add the main view to the viewport
-        Ext.create({
-            xtype: 'app-main'
-        })
-
+        Ext.widget('app-main' );
 
     }
 })
