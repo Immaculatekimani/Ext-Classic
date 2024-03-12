@@ -44,6 +44,12 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         }
     },
     {
+        text: 'VTypes',
+        listeners: {
+            click: 'onVTypesClicked'
+        }
+    },
+    {
         text: 'Check Out',
         listeners: {
             click: 'onCheckoutClicked'

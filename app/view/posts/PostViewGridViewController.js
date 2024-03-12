@@ -64,5 +64,9 @@ Ext.define('MyClassic.view.posts.PostGridViewController',{
             });
 
         }
+    }, onVTypesClicked: function (btn, e, eOpts) {
+        Ext.create({
+            xtype: "vtypevalidation",
+        });
     },
 })
