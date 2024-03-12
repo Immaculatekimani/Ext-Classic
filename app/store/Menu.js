@@ -34,6 +34,12 @@ Ext.define('MyClassic.store.Menu',{
                         leaf: true
                     },
                     {
+                        text: 'Posts',
+                        iconCls: 'fa fa-users',
+                        className: 'postgrid',
+                        leaf: true
+                    },
+                    {
                         text: 'Personnel',
                         iconCls: 'fa fa-users',
                         className: 'mainlist',

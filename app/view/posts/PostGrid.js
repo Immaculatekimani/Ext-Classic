@@ -12,6 +12,20 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         }
     },
     {
+        text: 'Edit/View Post',
+        iconCls: 'fas fa-pencil-alt',
+        listeners: {
+            click: 'onEditClicked'
+        }
+    },
+    {
+        text: 'Delete Post',
+        iconCls: 'far fa-trash-alt',
+        listeners: {
+            click: 'onDeleteClicked'
+        }
+    },
+    {
         text: 'Form Fields',
         listeners: {
             click: 'onFormFieldClicked'
