@@ -5,12 +5,37 @@ Ext.define('MyClassic.view.posts.PostGrid', {
     store: {
         type: 'posts'
     },
-    tbar: [{
+    tbar: [
+        {
+            fieldLabel: 'Search',
+            xtype: 'textfield',
+            listeners: {
+                change: 'onSearchKeyValueChange'
+            }
+        },
+        {
+            fieldLabel: 'Choose User',
+            xtype: 'combo',
+
+            store: {
+                type: 'users'
+            },
+            queryMode: 'local',
+            displayField: 'username',
+            valueField: '_id',
+            listeners:{
+                change:'onUserSelectionChange',
+                select:'onUserSelected'
+            }
+        },
+        {
         text: 'Add Post',
+        xtype: 'button',
+        iconCls: 'fas fa-plus',
         listeners: {
             click: 'onAddPostClicked'
         }
-    },
+    }, '->',
     {
         text: 'Edit/View Post',
         iconCls: 'fas fa-pencil-alt',

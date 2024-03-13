@@ -2,6 +2,10 @@ Ext.define('MyClassic.view.posts.PostGridViewController',{
     extend: 'Ext.app.ViewController',
     alias: 'controller.postgridviewcontroller',
     mixins: ['MyClassic.mixin.GridMixin'],
+    init:function(){
+        Ext.getStore('users').load()
+    },
+
 
     onAddPostClicked:function(btn,e,eOpts){
         console.log(btn.getText() + " was clicked");
@@ -69,4 +73,49 @@ Ext.define('MyClassic.view.posts.PostGridViewController',{
             xtype: "vtypevalidation",
         });
     },
+    onSearchKeyValueChange: function (view, newValue, oldValue, eOpts) {
+        let me = this,
+            v = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+
+        let store = v.getStore();
+
+        store.reload({
+            params: {
+                userId: newValue,
+
+            }
+        })
+        /*   console.log();
+          if(newValue === ''){
+              store.reload()
+          }else{
+              let newStore = store.filterBy((record) => record.get('username').includes(newValue))
+              vm.set("dummyUsers", newStore)
+          }
+        */
+    },
+    onUserSelectionChange: function (combo, newValue, oldValue, eOpts) {
+        this.filterPosts(newValue)
+    },
+    onUserSelected: function (combo, record, eOpts) {
+        this.filterPosts(combo.getValue())
+    },
+    filterPosts: function (newValue){
+        let me = this,
+            v = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+
+        let store = v.getStore();
+
+        store.reload({
+            params: {
+                userId: newValue,
+
+            }
+        })
+    }
+
 })
