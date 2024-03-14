@@ -7,22 +7,29 @@ Ext.define('MyClassic.view.users.UserGridController', {
         store.load();
     },
     onUserGridCellClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
-        let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
-        let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
-        postsStore.reload({
-            params: {
-                userId: record.get('_id')
-            }
-        });
-        todosStore.reload({
-            params: {
-                userId: record.get('_id')
-            }
-        })
+        // let postsStore = Ext.ComponentQuery.query('postgrid')[0].getStore();
+        // let todosStore = Ext.ComponentQuery.query('todogrid')[0].getStore();
+        // postsStore.reload({
+        //     params: {
+        //         userId: record.get('_id')
+        //     }
+        // });
+        // todosStore.reload({
+        //     params: {
+        //         userId: record.get('_id')
+        //     }
+        // })
+
+        let me = this,
+            view = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+        vm.set("record",record)
     },
     onShowDetails:function(btn,e,eOpts){
         let userGrid = this.getView();
-        let lowerPanel = Ext.ComponentQuery.query('datapanel')[0];
+        // let lowerPanel = Ext.ComponentQuery.query('datapanel')[0];
+        let lowerPanel = Ext.ComponentQuery.query('userformtab')[0];
         if(userGrid.getHeight() === 400){
             userGrid.setHeight(300)
             lowerPanel.setHeight(400)
@@ -43,6 +50,15 @@ Ext.define('MyClassic.view.users.UserGridController', {
     },
     onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
 
+    },
+    onSelectUser: function (id) {
+        let me = this,
+            grid = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+        let record = grid.getStore().findRecord('_id', id)
+        vm.set("record", record)
+        grid.getSelectionModel().select(record)
     }
     
 })
