@@ -7,6 +7,8 @@ Ext.define('MyClassic.view.login.LoginController', {
         // This would be the ideal location to verify the user's credentials via
         // a server-side lookup. We'll just move forward for the sake of this example.
 
+        localStorage.setItem("hasAccessToUsers", true);
+
         // Set the localStorage value to true
         localStorage.setItem("MyAppLoggedIn", true);
 
