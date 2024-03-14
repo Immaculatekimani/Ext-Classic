@@ -1,6 +1,6 @@
 Ext.define('MyClassic.view.posts.Posts',{
     extend:'Ext.panel.Panel',
-    xtype:'users',
+    xtype:'posts',
     items:[
         {
             xtype:'postgrid'

@@ -13,7 +13,7 @@ Ext.define('MyClassic.store.Menu',{
                     {
                         text: 'Data Groups',
                         iconCls: 'fa-layer-group',
-                        className: 'summarizepanel',
+                        className: 'groupdata',
                         leaf: true
                     }
                 ]
@@ -26,19 +26,25 @@ Ext.define('MyClassic.store.Menu',{
                     {
                         text: 'User Details',
                         iconCls: 'fa-database',
-                        className: 'parentpanel',
+                        className: 'userpanel',
                         leaf: true
                     },
                     {
                         text: 'Posts',
                         iconCls: 'fa fa-users',
-                        className: 'postgrid',
+                        className: 'posts',
                         leaf: true
                     },
                     {
                         text: 'Personnel',
                         iconCls: 'fa fa-users',
                         className: 'mainlist',
+                        leaf: true
+                    },
+                    {
+                        text: 'Todos',
+                        iconCls: 'fa-solid fa-square-check',
+                        className: 'todos',
                         leaf: true
                     }
                 ]
