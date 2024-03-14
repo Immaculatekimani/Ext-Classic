@@ -50,6 +50,15 @@ Ext.define('MyClassic.view.users.UserGridController', {
     },
     onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
 
+    },
+    onSelectUser: function (id) {
+        let me = this,
+            grid = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+        let record = grid.getStore().findRecord('_id', id)
+        vm.set("record", record)
+        grid.getSelectionModel().select(record)
     }
     
 })
