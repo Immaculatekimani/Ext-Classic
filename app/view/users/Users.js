@@ -6,7 +6,7 @@ Ext.define('MyClassic.view.users.Users',{
             xtype:'usergrid'
         },
         {
-            xtype:'tabpanel'
+            xtype:'userformtab'
         }
     ]
 })
