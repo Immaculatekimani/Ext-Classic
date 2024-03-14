@@ -51,35 +51,41 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         }
     },
     {
-        text: 'Form Fields',
-        listeners: {
-            click: 'onFormFieldClicked'
-        }
+        text:'Other Forms',
+        menu:[
+            {
+                text: 'Form Fields',
+                listeners: {
+                    click: 'onFormFieldClicked'
+                }
+            },
+            {
+                text: 'Accordion',
+                listeners: {
+                    click: 'onAccordionClicked'
+                }
+            },
+            {
+                text: 'HBox',
+                listeners: {
+                    click: 'onHboxClicked'
+                }
+            },
+            {
+                text: 'VTypes',
+                listeners: {
+                    click: 'onVTypesClicked'
+                }
+            },
+            {
+                text: 'Check Out',
+                listeners: {
+                    click: 'onCheckoutClicked'
+                }
+            }
+        ]
     },
-    {
-        text: 'Accordion',
-        listeners: {
-            click: 'onAccordionClicked'
-        }
-    },
-    {
-        text: 'HBox',
-        listeners: {
-            click: 'onHboxClicked'
-        }
-    },
-    {
-        text: 'VTypes',
-        listeners: {
-            click: 'onVTypesClicked'
-        }
-    },
-    {
-        text: 'Check Out',
-        listeners: {
-            click: 'onCheckoutClicked'
-        }
-    }
+    
 ],
     columns: [
         { dataIndex: '_id', text: 'ID' },

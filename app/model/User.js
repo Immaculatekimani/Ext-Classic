@@ -14,7 +14,7 @@ Ext.define('MyClassic.model.User',{
     ],
     proxy: {
         type: 'rest',
-        url: 'resources/users.json',
+        url:  'http://localhost:3000/users',
         reader: {
             type: 'json',
             rootProperty: 'rows',
