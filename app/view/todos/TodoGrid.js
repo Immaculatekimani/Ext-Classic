@@ -27,6 +27,12 @@ Ext.define('MyClassic.view.todos.TodoGrid', {
                 disabled: '{!todogrid.selection}'
             }
         }
-    ]
+    ],
+    bbar: {
+        xtype: 'pagingtoolbar',
+        displayInfo: true
+    },
+    scrollable:true,
+
 
 })
