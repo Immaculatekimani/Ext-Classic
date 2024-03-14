@@ -9,11 +9,11 @@ Ext.define('MyClassic.store.Menu',{
                 text: 'Security',
                 iconCls:'fas fa-users-cog',
                 children:[
-                    {
-                        text:'Users',
-                        iconCls:'fa fa-users',
-                        leaf:true
-                    },
+                    // {
+                    //     text:'Users',
+                    //     iconCls:'fa fa-users',
+                    //     leaf:true
+                    // },
                     {
                         text: 'Data Groups',
                         iconCls: 'fa-layer-group',
@@ -45,6 +45,20 @@ Ext.define('MyClassic.store.Menu',{
                         className: 'mainlist',
                         leaf: true
                     }
+                ]
+
+            },
+            {
+                text: 'Review',
+                iconCls:'fa-layer-group',
+                children: [
+                    {
+                        text: 'Review Panel',
+                        iconCls: 'fa-layer-group',
+                        className: 'reviewpanel',
+                        leaf: true
+                    }
+
                 ]
 
             },

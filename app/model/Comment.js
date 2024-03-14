@@ -14,7 +14,7 @@ Ext.define('MyClassic.model.Comment',{
     ],
     proxy:{
         type: 'rest',
-        url: 'https://jsonplaceholder.typicode.com/comments',
+        url: 'http://localhost:3000/posts',
         reader: {
             type: 'json',
         }
@@ -24,23 +24,23 @@ Ext.define('MyClassic.model.Comment',{
     }
 
 
-},function () {
-    MyClassic.model.Post.load(1, {
-        callback: function (post) {
-            post.comments(function (comments){
-                comments.each(function(comment){
-                    console.log('Comment: '+comment.get('name') + 'commentId '+ comment.get("id"));
-                });
-            });
-        }
-    });
+// },function () {
+//     MyClassic.model.Post.load(1, {
+//         callback: function (post) {
+//             post.comments(function (comments){
+//                 comments.each(function(comment){
+//                     console.log('Comment: '+comment.get('name') + 'commentId '+ comment.get("id"));
+//                 });
+//             });
+//         }
+//     });
 
-    MyClassic.model.Comment.load(1, {
-        callback: function (comment) {
-            comment.getPost(function (post) {
-                console.log('Got post from comment: ' + post.get('title'));
-            });
-        }
-    });
-}
+//     MyClassic.model.Comment.load(1, {
+//         callback: function (comment) {
+//             comment.getPost(function (post) {
+//                 console.log('Got post from comment: ' + post.get('title'));
+//             });
+//         }
+//     });
+ }
 )

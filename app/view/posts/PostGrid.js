@@ -5,12 +5,37 @@ Ext.define('MyClassic.view.posts.PostGrid', {
     store: {
         type: 'posts'
     },
-    tbar: [{
+    tbar: [
+        {
+            fieldLabel: 'Search',
+            xtype: 'textfield',
+            listeners: {
+                change: 'onSearchKeyValueChange'
+            }
+        },
+        {
+            fieldLabel: 'Choose User',
+            xtype: 'combo',
+
+            store: {
+                type: 'users'
+            },
+            queryMode: 'local',
+            displayField: 'username',
+            valueField: '_id',
+            listeners:{
+                change:'onUserSelectionChange',
+                select:'onUserSelected'
+            }
+        },
+        {
         text: 'Add Post',
+        xtype: 'button',
+        iconCls: 'fas fa-plus',
         listeners: {
             click: 'onAddPostClicked'
         }
-    },
+    }, '->',
     {
         text: 'Edit/View Post',
         iconCls: 'fas fa-pencil-alt',
@@ -26,35 +51,41 @@ Ext.define('MyClassic.view.posts.PostGrid', {
         }
     },
     {
-        text: 'Form Fields',
-        listeners: {
-            click: 'onFormFieldClicked'
-        }
+        text:'Other Forms',
+        menu:[
+            {
+                text: 'Form Fields',
+                listeners: {
+                    click: 'onFormFieldClicked'
+                }
+            },
+            {
+                text: 'Accordion',
+                listeners: {
+                    click: 'onAccordionClicked'
+                }
+            },
+            {
+                text: 'HBox',
+                listeners: {
+                    click: 'onHboxClicked'
+                }
+            },
+            {
+                text: 'VTypes',
+                listeners: {
+                    click: 'onVTypesClicked'
+                }
+            },
+            {
+                text: 'Check Out',
+                listeners: {
+                    click: 'onCheckoutClicked'
+                }
+            }
+        ]
     },
-    {
-        text: 'Accordion',
-        listeners: {
-            click: 'onAccordionClicked'
-        }
-    },
-    {
-        text: 'HBox',
-        listeners: {
-            click: 'onHboxClicked'
-        }
-    },
-    {
-        text: 'VTypes',
-        listeners: {
-            click: 'onVTypesClicked'
-        }
-    },
-    {
-        text: 'Check Out',
-        listeners: {
-            click: 'onCheckoutClicked'
-        }
-    }
+    
 ],
     columns: [
         { dataIndex: '_id', text: 'ID' },
