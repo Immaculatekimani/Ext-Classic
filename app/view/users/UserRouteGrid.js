@@ -1,6 +1,6 @@
 Ext.define('MyClassic.view.users.UserGrid',{
     extend:'Ext.grid.GridPanel',
-    xtype:'usergrid',
+    xtype:'userroutegrid',
     controller:'usergridcontroller',
     title:'Users',
     store:{
@@ -46,29 +46,29 @@ Ext.define('MyClassic.view.users.UserGrid',{
                 allowBlank: false
             }
         },
-        {
-            dataIndex: 'city',
-            text: 'City',
-            flex:2
-        },
-        {
-            dataIndex: 'street',
-            text: 'Street',
-            flex:2,
-            editor: 'textfield'
-        },
-        {
-            dataIndex: 'suite',
-            text: 'Suite',
-            flex:2,
-            editor: 'textfield'
-        },
-        {
-            dataIndex: 'zipcode',
-            text: 'Zip Code',
-            flex:2,
-            editor: 'textfield'
-        },
+    //     {
+    //         dataIndex: 'city',
+    //         text: 'City',
+    //         flex:2
+    //     },a
+    //     {
+    //         dataIndex: 'street',
+    //         text: 'Street',
+    //         flex:2,
+    //         editor: 'textfield'
+    //     },
+    //     {
+    //         dataIndex: 'suite',
+    //         text: 'Suite',
+    //         flex:2,
+    //         editor: 'textfield'
+    //     },
+    //     {
+    //         dataIndex: 'zipcode',
+    //         text: 'Zip Code',
+    //         flex:2,
+    //         editor: 'textfield'
+    //     },
     ],
     tbar:[
         {
@@ -81,10 +81,10 @@ Ext.define('MyClassic.view.users.UserGrid',{
         '->',
         {
             text: 'Show Details',
-            handler: 'onShowDetails',
-            bind: {
-                disabled: '{!usergrid.selection}'
-            }  
+            handler: 'onRouteShowDetails',
+            // bind: {
+            //     disabled: '{!usergrid.selection}'
+            // }  
         }
     ],
     selModel: {
@@ -96,9 +96,9 @@ Ext.define('MyClassic.view.users.UserGrid',{
         displayInfo: true
     },
     listeners:{
-        cellclick:'onUserGridCellClick',
-        celldblclick:'onUserGridCellDblClick',
-        cellcontextmenu:'onUserGridCellContextMenu'
+        cellclick:'onUserRouteGridCellClick',
+        celldblclick:'onUserRouteGridCellDblClick',
+        cellcontextmenu:'onUserRouteGridCellContextMenu'
     }
 
 })

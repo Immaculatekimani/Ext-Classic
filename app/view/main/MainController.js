@@ -7,6 +7,15 @@ Ext.define('MyClassic.view.main.MainController', {
 
     alias: 'controller.main',
 
+    routes:{
+        'home':'onHomeRoute'
+    },
+    onHomeRoute:function(){
+        let mainPanel = this.getMainPanel();
+        if(mainPanel){
+            mainPanel.setActiveTab(0)
+        }
+    },
     onItemSelected: function (sender, record) {
         Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
     },

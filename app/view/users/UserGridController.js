@@ -20,6 +20,7 @@ Ext.define('MyClassic.view.users.UserGridController', {
             }
         })
     },
+    
     onShowDetails:function(btn,e,eOpts){
         let userGrid = this.getView();
         let lowerPanel = Ext.ComponentQuery.query('datapanel')[0];
@@ -43,6 +44,34 @@ Ext.define('MyClassic.view.users.UserGridController', {
     },
     onUserGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
 
-    }
+    },
+    //FOR THE ROUTE GRID
+    onUserRouteGridCellDblClick:function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+        console.log(record.get('username'));
+    },
+    onUserRouteGridCellContextMenu: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts){
+
+    },
+    onUserRouteGridCellClick: function (grid, td, cellIndex, record, tr, rowIndex, e, eOpts) {
+        let me = this,
+            view = me.getView(),
+            vm = me.getViewModel(),
+            refs = me.getReferences();
+        vm.set("record",record)
+    },
+    
+    onRouteShowDetails:function(btn,e,eOpts){
+        let userGrid = this.getView();
+        let lowerPanel = Ext.ComponentQuery.query('userformtab')[0];
+        if(userGrid.getHeight() === 400){
+            userGrid.setHeight(300)
+            lowerPanel.setHeight(400)
+            btn.setText("Hide Details")
+        }else{
+            userGrid.setHeight(400)
+            lowerPanel.setHeight(0)
+            btn.setText("Show Details")
+        }
+    },
     
 })

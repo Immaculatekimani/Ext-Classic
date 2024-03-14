@@ -1,0 +1,12 @@
+Ext.define('MyClassic.view.users.UserRouting',{
+    extend:'Ext.panel.Panel',
+    xtype:'userrouting',
+    items:[
+        {
+            xtype:'userroutegrid'
+        },
+        {
+            xtype:'userformtab'
+        }
+    ]
+})
