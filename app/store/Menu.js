@@ -70,6 +70,26 @@ Ext.define('MyClassic.store.Menu',{
                 ]
 
             },
+            {
+                text: 'Ledger',
+                iconCls:'fa-layer-group',
+                children: [
+                    {
+                        text: 'Trial Balance',
+                        iconCls: 'fa-layer-group',
+                        className: 'accounts',
+                        leaf: true
+                    },
+                    {
+                        text:'Users',
+                        iconCls:'fa fa-users',
+                        className: 'users',
+                        leaf:true
+                    },
+
+                ]
+
+            },
 
         ]
     }

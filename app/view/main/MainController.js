@@ -8,7 +8,7 @@ Ext.define('MyClassic.view.main.MainController', {
     alias: 'controller.main',
     routes:{
         'home':'onHomeRoute',
-        'users|reviewpanel|mainlist|posts|groupdata|todos|userpanel': {
+        'users|reviewpanel|mainlist|posts|groupdata|todos|userpanel|accounts': {
             action: 'onRoute',
             before: 'onBeforeRoute'
         },
